@@ -74,3 +74,11 @@ end
 group :production do
   gem 'pg'
 end
+
+gem 'devise'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 6.0.0' 
+  gem 'factory_bot_rails'
+  gem 'faker'
+end
