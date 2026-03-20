@@ -1,3 +1,3 @@
-class Itme < ApplicationRecord
+class Item < ApplicationRecord
   belongs_to :user
 end
