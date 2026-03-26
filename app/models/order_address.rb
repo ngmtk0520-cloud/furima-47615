@@ -4,9 +4,9 @@ class OrderAddress
 
   validates :user_id, :item_id, :token, presence: true
   validates :postal_code, :prefecture_id, :city, :addresses, :phone_number, presence: true
-  validates :postal_code, format: { with: /\A\d{3}-\d{4}\z/ }
+  validates :postal_code, format: { with: /\A\d{3}-\d{4}\z/, allow_blank: true }
   validates :prefecture_id, numericality: { other_than: 1 }
-  validates :phone_number, format: { with: /\A\d{10,11}\z/ }
+  validates :phone_number, format: { with: /\A\d{10,11}\z/, allow_blank: true }
 
   def save
     return false if invalid?
