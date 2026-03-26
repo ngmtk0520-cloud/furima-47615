@@ -23,11 +23,12 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    redirect_to root_path if @item.order.present?
   end
 
   def update
     if @item.update(item_params)
-      redirect_to item_path(@item[:id])
+      redirect_to root_path and return
     else
       render :edit, status: :unprocessable_entity
     end
