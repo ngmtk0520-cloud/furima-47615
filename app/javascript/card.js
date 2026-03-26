@@ -1,6 +1,7 @@
 const pay = () => {
-  const publicKey = gon.public_key
-  const payjp = Payjp(gon.public_Key)
+    if (typeof gon === 'undefined') return;
+  const publickey = gon.public_key
+  const payjp = Payjp(gon.public_key)
   const elements = payjp.elements();
   const numberElement = elements.create('cardNumber');
   const expiryElement = elements.create('cardExpiry');
@@ -26,7 +27,7 @@ const pay = () => {
         cvcElement.clear();
 
         submitForm.submit();
-      }
+      };
     });
     e.preventDefault();
   });
