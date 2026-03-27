@@ -15,6 +15,6 @@ class User < ApplicationRecord
     validates :first_name_kana
   end
 
-  has_many :items
-  has_many :orders
+  has_many :orders, dependent: :destroy
+  has_many :items, dependent: :destroy
 end
