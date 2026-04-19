@@ -1,3 +1,32 @@
+TECHCAMP 最終課題<フリマサイトの作成>
+Furima
+
+デプロイ先 (AWS)
+http://13.192.199.108
+
+Basic認証
+ID: admin
+Pass: 2222
+
+ログイン用アカウント
+email: test@test.com
+password: 111111abc
+
+Backend
+Ruby 3.2.0
+Ruby on Rails 7.1.0
+認証: Devise
+テスト: RSpec
+
+インフラ構成
+サーバー: AWS (EC2)
+Webサーバー: Nginx
+アプリサーバー: Unicorn
+データベース: MariaDB
+言語/フレームワーク: Ruby 3.2.0 / Ruby on Rails 7.1.0
+画像ストレージ: AWS S3
+
+
 markdown
 ## データベース設計
 
